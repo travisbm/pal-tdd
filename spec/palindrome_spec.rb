@@ -27,4 +27,9 @@ class PalindromeTest < Minitest::Test
     check = Palindrome.new
     assert_equal("string",check.check_palindrome("string"))
   end
+
+  def test_check_for_palindrome
+    check = Panlindrome.new
+    assert_equal(true, check.check_palindrome("string"))
+  end
 end
