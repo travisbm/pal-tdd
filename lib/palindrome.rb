@@ -1,6 +1,7 @@
 class Palindrome
   def check_palindrome(str)
-    if str == str.reverse
+    test_str = str.downcase.gsub(/[^a-z]/, '')
+    if test_str == test_str.reverse
       true
     else
       false

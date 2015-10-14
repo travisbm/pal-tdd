@@ -3,15 +3,6 @@ require 'minitest/pride'
 require_relative '../lib/palindrome'
 
 class PalindromeTest < Minitest::Test
-  def setup
-    puts "I run before each test!"
-    # Put any repetitive setup code here
-  end
-
-  def teardown
-    puts "I run after each test!"
-    # Put any needed 'cleanup' code here
-  end
 
   def test_palindrom_exists
     assert(Palindrome)
@@ -27,6 +18,7 @@ class PalindromeTest < Minitest::Test
     check = Palindrome.new
     assert_equal(true, check.check_palindrome("tacocat"))
     assert_equal(false, check.check_palindrome("hello"))
+    assert_equal(true, check.check_palindrome("Ta. co, cat."))
   end
 
 
