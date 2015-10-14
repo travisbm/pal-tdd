@@ -22,4 +22,9 @@ class PalindromeTest < Minitest::Test
     check = Palindrome.new
     assert_respond_to(check, :check_palindrome)
   end
+
+  def test_check_palindrome_returns_str
+    check = Palindrome.new
+    assert_equal("string",check.check_palindrome("string"))
+  end
 end
