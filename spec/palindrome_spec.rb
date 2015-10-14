@@ -18,4 +18,8 @@ class PalindromeTest < Minitest::Test
   end
 
   #Write more tests here
+  def test_check_palindrome
+    check = Palindrome.new
+    assert_respond_to(check, :check_palindrome)
+  end
 end
